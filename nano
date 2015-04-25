@@ -1,0 +1,8 @@
+[FreeTDS]
+Description = FreeTDS driver
+Driver = /usr/lib/i386-linux-gnu/odbc/libtdsodbc.so
+Setup = /usr/lib/i386-linux-gnu/odbc/libtdsS.so
+Trace = Yes
+TraceFile = /tmp/freetds.log
+FileUsage = 1
+UsageCount =1
