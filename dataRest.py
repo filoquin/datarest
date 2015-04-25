@@ -66,12 +66,12 @@ def api_root():
 
 @app.route('/empresas',methods = ['GET', 'POST'])
 def api_empresas():
-    transaction=pydtt.pydtt_empresas('POLICLI','POLICLI', 'PNSA\\meditim', 'riv$%250')
+    transaction=pydtt.pydtt_empresas('host','db','usr','pass')
     return return_result_set(transaction.get_all())
 
 @app.route('/empresas/search')
 def api_search_empresas():
-    transaction=pydtt.pydtt_empresas('POLICLI','POLICLI', 'PNSA\\meditim', 'riv$%250')
+    transaction=pydtt.pydtt_empresas('host','db','usr','pass')
     return return_result_set(transaction.search())
 
 '''
@@ -85,12 +85,12 @@ def api_search_empresas():
 @app.route('/art',methods = ['GET', 'POST'])
 def api_art():
     
-    transaction=pydtt.pydtt_art('POLICLI','POLICLI', 'PNSA\\meditim', 'riv$%250')
+    transaction=pydtt.pydtt_art('host','db','usr','pass')
     return return_result_set(transaction.get_all())
 
 @app.route('/art/search')
 def api_search_art():
-    transaction=pydtt.pydtt_art('POLICLI','POLICLI', 'PNSA\\meditim', 'riv$%250')
+    transaction=pydtt.pydtt_art('host','db','usr','pass')
     return return_result_set(transaction.search())
 
 
@@ -106,7 +106,7 @@ def api_search_art():
 
 @app.route('/hc/ingresos/<from_time>')
 def api_hc_ingresos(from_time):
-    transaction=pydtt.pydtt_hc('POLICLI','POLICLI', 'PNSA\\meditim', 'riv$%250')
+    transaction=pydtt.pydtt_hc('host','db','usr','pass')
     return return_result_set(transaction.get_from_time(from_time))
 
 

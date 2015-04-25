@@ -1,3 +1,0 @@
-import pymssql
-
-pymssql.connect(host, '\\theusername', 'thepassword', db)
